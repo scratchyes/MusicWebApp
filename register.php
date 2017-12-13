@@ -1,3 +1,78 @@
+<?php
+
+
+
+function sanitizeFormPassword($inputText){
+    
+    $inputText = strip_tags($inputText);
+    return $inputText;
+    
+    
+}
+
+
+
+
+
+
+function sanitizeFormUsername($inputText){
+    
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ","",$inputText); 
+    
+    return $inputText;
+    
+    
+}
+
+
+function sanitizeFormString($inputText){
+    
+    $inputText = strip_tags($inputText);
+    $inputText = str_replace(" ","",$inputText);
+    $inputText = ucfirst(strtolower($inputText));
+    return $inputText;
+    
+    
+}
+
+
+
+
+if(isset($_POST['loginButton'])){
+    //loginButton was pressed
+}
+
+
+if(isset($_POST['registerButton'])){
+    //registerButton was pressed
+    //echo"register button was pressed";
+    
+    
+    
+    $username = sanitizeFormUsername($_POST['username']);
+    $firstName = sanitizeFormString($_POST['firstName']);
+    $lastName = sanitizeFormString($_POST['lastName']);
+    $email = sanitizeFormString($_POST['email']);
+    $email2 = sanitizeFormString($_POST['email2']);
+    $password = sanitizeFormPassword($_POST['password']);
+    $password = sanitizeFormPassword($_POST['password2']);
+ 
+    
+    
+    
+    
+}
+
+
+?>
+
+
+
+
+<!--HTML-->
+
+
 <html>
 
     <head>
@@ -29,14 +104,14 @@
                         required>
             </p>
                 
-                <button type="sumbit" name="loginButton">Login In</button>
+                <button type="sumbit" name="loginButton">Log in</button>
                 
             
             </form>
             
             
             
-            //REGISTER ACCOUNT PART STARTS HERE
+            <!--REGISTER ACCOUNT PART STARTS HERE! -->
             
              <form id="registerForm" action="register.php" method="POST">
             
@@ -66,14 +141,14 @@
                 </p>
                     <p>
                 
-                    <label for="email">Username</label>
+                    <label for="email">Email</label>
                 <input id="email" name="email" type="email"
                        placeholder="e.g. barkersmith@gmail.com" required>
                 
                 </p>
                     <p>
                 
-                    <label for="email2">Username</label>
+                    <label for="email2">Confirm email</label>
                 <input id="email2" name="email2" type="email"
                        placeholder="e.g. barkersmith@gmail.com" required>
                 
@@ -90,7 +165,7 @@
                 
                  
                            <p>
-                <label for="password2">Password</label>
+                <label for="password2">Confirm password</label>
                 <input id="password2" name="password2" type="password"
                        placeholder="Your password"
                         required>
