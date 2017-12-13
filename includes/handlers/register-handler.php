@@ -33,16 +33,49 @@ function sanitizeFormString($inputText){
 
 
 
-if(isset($_POST['loginButton'])){
-    //loginButton was pressed
+
+function validateUsername($un){
+    
+    
+    
+    
+}
+function validateFirstname($fn){
+    
+    
+    
+    
+}
+function validateLastname($ln){
+    
+    
+    
+    
 }
 
 
+
+function validateEmails($em, $em2){
+    
+    
+}
+
+
+function validatePasswords($pw,$pw2){
+    
+    
+    
+    
+}
+
+
+
+
+
+
+
+
 if(isset($_POST['registerButton'])){
-    //registerButton was pressed
-    //echo"register button was pressed";
-    
-    
     
     $username = sanitizeFormUsername($_POST['username']);
     $firstName = sanitizeFormString($_POST['firstName']);
@@ -52,6 +85,13 @@ if(isset($_POST['registerButton'])){
     $password = sanitizeFormPassword($_POST['password']);
     $password = sanitizeFormPassword($_POST['password2']);
  
+    
+    validateUsername($username);
+    validateFirstname($firstName);
+    validateLastName($lastName);
+    validateEmails($email, $email2);
+    validatePasswords($password, $password2);
+    
     
     
     
