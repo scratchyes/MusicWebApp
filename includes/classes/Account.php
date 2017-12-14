@@ -64,7 +64,7 @@ class Account {
 
        if(strlen($un)> 25 || strlen($un) <5){
 
-           array_push($this->errorArray, "Your username must be between 5 and 25 characters");
+           array_push($this->errorArray, Constants::$userNameCharacters);
            return;
 
        }
@@ -80,7 +80,7 @@ class Account {
 
        if(strlen($fn)> 25 || strlen($fn) <2){
 
-           array_push($this->errorArray, "Your first name must be between  and 25 characters");
+           array_push($this->errorArray, Constants::$firstNameCharacters);
            return;
 
        }
@@ -93,7 +93,7 @@ class Account {
 
        if(strlen($ln)> 25 || strlen($ln) <2){
 
-           array_push($this->errorArray, "Your last name must be between 2 and 25 characters");
+           array_push($this->errorArray, Constants::$lastNameCharacters);
            return;
 
        }
@@ -108,11 +108,11 @@ class Account {
 
 
        if($em != $em2){
-             array_push($this->errorArray, "Your emails dont match");
+             array_push($this->errorArray, Constants::$emailsDoNotMatch);
            return;
        }
        if(!filter_var($em, FILTER_VALIDATE_EMAIL)){
-            array_push($this->errorArray, "email is ivalid");
+            array_push($this->errorArray, Constants::$emailInvalid);
            return;
 
        }
@@ -129,7 +129,7 @@ class Account {
 
        if($pw != $pw2){
 
-           array_push($this->errorArray, "Your passwords dont match");
+           array_push($this->errorArray, Constants::$passwordsDoNotMatch);
            return;
 
        }
@@ -137,14 +137,14 @@ class Account {
 
        if(preg_match('/[^A-Za-z0-9]/',$pw)){
 
-           array_push($this->errorArray, "Your password can only contain number and letters");
+           array_push($this->errorArray, Constants::$passwordNotAlphanumeric);
            return;
 
        }
 
          if(strlen($pw)> 30 || strlen($pw) <5){
 
-           array_push($this->errorArray, "Your password must be between 5 and 30 characters");
+           array_push($this->errorArray, Constants::$passwordCharacters);
            return;
 
        }
