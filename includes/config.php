@@ -1,6 +1,7 @@
 <?php
 
-ob_start();
+ob_start(); // to start ouput buffering data to database
+session_start(); // to start a session
 
 
 $timezone = date_default_timezone_set("Asia/Kolkata");
