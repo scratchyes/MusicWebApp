@@ -111,6 +111,9 @@ include("includes/classes/Constants.php");
         <div id="loginContainer">
         
                 <div id="inputContainer">
+                    
+                    
+                    
                     <form id="loginForm" action="register.php" method="POST">
                         
                         
@@ -245,8 +248,30 @@ include("includes/classes/Constants.php");
 
 
                 </div>      
-            <!--     INPUT CONTAINER DIC ENDS       -->
+            <!--     INPUT CONTAINER DIV ENDS       -->
         
+            
+            
+            
+            <div id="loginText">
+            
+                <h1>Get great music, right now</h1>
+                <h2>Listen to loads of songs for free</h2>
+                <ul>
+                
+                    <li>Discover new music</li>
+                    <li>Create your own playlists</li>
+                    <li>Follow your favourite artists</li>
+                    
+                
+                </ul>
+                
+            
+            
+            </div>
+            
+            
+            
             
             </div>  
 <!--        LOGIN CONTAINER DIV ENDS-->
