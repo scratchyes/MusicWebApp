@@ -17,7 +17,7 @@ html, body{
 #background{
     
     background-color: #000;
-    background-image: url(../images/bg.png);
+    background-image: url(../images/bg.jpg);
     background-position: center;
     background-size: cover;
     height: 100%;
@@ -139,6 +139,125 @@ html, body{
     
     
 }
+
+
+
+
+
+.hasAccountText span{
+    
+    font-weight: bold;
+    font-size: 12px;
+    
+    
+    
+}
+
+
+.hasAccountText{
+    
+    
+    text-align: center;
+}
+
+
+
+
+#registerForm,
+#loginForm{
+    
+    
+    display: none;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+AUTOFILL LOGIN DETAILS HAD YELLOW BACKGROUND
+USE THE BELOW CODE FOR MAKING IT WHITE
+*/
+
+input:-webkit-autofill {
+    -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+    -webkit-text-fill-color: #333;
+}
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: /*your box-shadow*/,0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+}
+
+/*END OF THE AUTOFILL CODE OVERRIDE*/
+
+
+
+
+
 
 
 

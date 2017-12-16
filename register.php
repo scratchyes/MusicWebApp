@@ -31,11 +31,75 @@ include("includes/classes/Constants.php");
 
 <html>
 <head>
+    
+    
+    
 	<title>Welcome to Slotify!</title>
     <link rel="stylesheet" type="text/css" href="assets/css/register.css">
-        
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/register.js"></script>    
+    
+    
+    
+    
 </head>
 <body>
+    
+    
+    
+    
+    <?php
+    
+    if(isset($_POST['registerButton'])){
+        
+        
+        echo '<script>
+                        $(document).ready(function(){
+
+                                $("#loginForm").hide();
+                                $("#registerForm").show();
+
+
+                                });
+
+
+                </script> ';
+        
+        
+    }
+    
+    else{
+        
+        
+        echo'
+    <script>
+
+            $(document).ready(function(){
+                
+                    $("#loginForm").show();
+                    $("#registerForm").hide();
+                
+                
+                    });
+
+        
+    </script>';
+        
+        
+        
+    }
+    
+    
+    
+    ?>
+    
+    
+    
+    
+    
     
     
     
@@ -70,6 +134,21 @@ include("includes/classes/Constants.php");
                         
 
                         <button type="submit" name="loginButton">LOG IN</button>
+                        
+                        
+                        <div class="hasAccountText">
+                        
+                        
+                            <span id="hideLogin">
+                            
+                            Don't have an account yet? Sign Up.
+                            </span>
+                            
+                        </div>
+                        
+                        
+                        
+                        
                         
                         
 
@@ -147,6 +226,20 @@ include("includes/classes/Constants.php");
                         </p>
 
                         <button type="submit" name="registerButton">SIGN UP</button>
+                        
+                         
+                        <div class="hasAccountText">
+                        
+                        
+                            <span id="hideRegister">
+                            
+                            Already have an account? Log in.
+                            </span>
+                            
+                        </div>
+                        
+                        
+                        
 
                     </form>
 

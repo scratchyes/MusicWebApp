@@ -74,7 +74,7 @@
 		private function validateUsername($un) {
 
 			if(strlen($un) > 25 || strlen($un) < 5) {
-				array_push($this->errorArray, Constants::$usernameCharacters);
+				array_push($this->errorArray, Constants::$userNameCharacters);
 				return;
 			}
             
@@ -134,9 +134,11 @@
 		private function validatePasswords($pw, $pw2) {
 			
 			if($pw != $pw2) {
-				array_push($this->errorArray, Constants::$passwordsDoNoMatch);
+				array_push($this->errorArray, Constants::$passwordsDoNotMatch);
 				return;
 			}
+            
+            
 
 			if(preg_match('/[^A-Za-z0-9]/', $pw)) {
 				array_push($this->errorArray, Constants::$passwordNotAlphanumeric);
