@@ -15,7 +15,7 @@ else {
 
 <html>
 <head>
-	<title>Welcome to Slotify!</title>
+	<title>Welcome to LiveMusic!</title>
 </head>
 
 <body>

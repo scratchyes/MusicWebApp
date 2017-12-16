@@ -44,24 +44,34 @@ include("includes/classes/Constants.php");
     <div id="background">
     
 
+        <div id="loginContainer">
+        
                 <div id="inputContainer">
                     <form id="loginForm" action="register.php" method="POST">
+                        
+                        
                         <h2>Login to your account</h2>
+                        
+                        
                         <p>
-
-
                             <?php echo $account->getError(Constants::$loginFailed); ?>
 
 
                             <label for="loginUsername">Username</label>
                             <input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. bartSimpson" required>
                         </p>
+                        
+                        
                         <p>
                             <label for="loginPassword">Password</label>
                             <input id="loginPassword" name="loginPassword" type="password" placeholder="Your password" required>
                         </p>
+                        
+                        
 
                         <button type="submit" name="loginButton">LOG IN</button>
+                        
+                        
 
                     </form>
 
@@ -75,6 +85,8 @@ include("includes/classes/Constants.php");
 
                     <form id="registerForm" action="register.php" method="POST">
                         <h2>Create your free account</h2>
+                        
+                        
                         <p>
                             <?php echo $account->getError(Constants::$userNameCharacters); ?>
 
@@ -84,18 +96,24 @@ include("includes/classes/Constants.php");
                             <input id="username" name="username" type="text" placeholder="e.g. bartSimpson" value="<?php getInputValue('username') ?>" required>
                         </p>
 
+                        
+                        
                         <p>
                             <?php echo $account->getError(Constants::$firstNameCharacters); ?>
                             <label for="firstName">First name</label>
                             <input id="firstName" name="firstName" type="text" placeholder="e.g. Bart" value="<?php getInputValue('firstName') ?>" required>
                         </p>
 
+                        
+                        
                         <p>
                             <?php echo $account->getError(Constants::$lastNameCharacters); ?>
                             <label for="lastName">Last name</label>
                             <input id="lastName" name="lastName" type="text" placeholder="e.g. Simpson" value="<?php getInputValue('lastName') ?>" required>
                         </p>
 
+                        
+                        
                         <p>
                             <?php echo $account->getError(Constants::$emailsDoNotMatch); ?>
                             <?php echo $account->getError(Constants::$emailInvalid); ?>
@@ -133,10 +151,38 @@ include("includes/classes/Constants.php");
                     </form>
 
 
-                </div>
+                </div>      
+            <!--     INPUT CONTAINER DIC ENDS       -->
+        
+            
+            </div>  
+<!--        LOGIN CONTAINER DIV ENDS-->
         
         
-        </div>
+        
+        </div> 
+<!--    BACKGROUND DIV ENDS-->
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </body>
+    
+    
+    
+    
+    
+    
+    
+    
+    
 </html>
