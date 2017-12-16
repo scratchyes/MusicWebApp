@@ -125,7 +125,7 @@ include("includes/classes/Constants.php");
 
 
                             <label for="loginUsername">Username</label>
-                            <input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. bartSimpson" required>
+                            <input id="loginUsername" name="loginUsername" type="text" placeholder="e.g. bartSimpson" value="<?php getInputValue('loginUsername') ?>" required>
                         </p>
                         
                         

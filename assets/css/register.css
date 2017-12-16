@@ -108,8 +108,10 @@ html, body{
 #inputContainer label{
     
     color: #a0a0a0;
-    font-size: 13px;
+    font-size: 17px;
     margin-top: 15px;
+    display: block;
+    margin-bottom: 2px;
     
    
 }
@@ -171,6 +173,65 @@ html, body{
     display: none;
     
 }
+
+
+
+
+#loginText{
+    
+    padding: 45px;
+    display: table-cell;
+ 
+}
+
+
+#loginText h1{
+    color: #7cfc00; 
+/*    SPOTIFY COLOR : #07d159*/
+    font-size: 60px;
+    font-weight: bold;
+    
+    
+    
+}
+
+
+#loginText h2{
+    
+    margin: 35px 0;
+    
+}
+
+#loginText ul{
+    
+    padding: 0; 
+    
+}
+
+
+#loginText li{
+    
+    font-size: 20px;
+    list-style-type: none;
+    padding: 4px 31px;
+    background: url(../images/icons/checked24.png) no-repeat 0 0;
+}
+
+#inputContainer .errorMessage{
+    
+    color: lawngreen;
+    font-size: 12px;
+    display: block;
+    
+    
+}
+
+
+
+
+
+
+
 
 
 /*
