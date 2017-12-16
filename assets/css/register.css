@@ -148,7 +148,7 @@ html, body{
     
     font-weight: bold;
     font-size: 12px;
-    
+    cursor: pointer;
     
     
 }
@@ -158,6 +158,7 @@ html, body{
     
     
     text-align: center;
+    
 }
 
 
@@ -172,7 +173,20 @@ html, body{
 }
 
 
+/*
 
+ONE WAY TO PUTTING POINTER ON THE HASACCOUNTTEXT FIELDS
+
+
+#hideLogin, #hideRegister:hover{
+    
+    cursor: pointer;
+    
+    
+}
+
+
+*/
 
 
 
