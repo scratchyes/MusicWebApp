@@ -1,6 +1,5 @@
 $(document).ready(function(){
     
-//    $("#loginForm").hide();
 
    $("#hideLogin").click(function(){
        
