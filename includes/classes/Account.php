@@ -8,34 +8,22 @@
 			$this->con = $con;
 			$this->errorArray = array();
 		}
-        
-        
-        public function login($un, $pw){
-            
-            $pw = md5($pw);
-            
-            $query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
-            
-            if(mysqli_num_rows($query) == 1){
-                
-                return true;
-                
-            }
-            
-            else{
-                
-                array_push($this->errorArray, Constants::$loginFailed);
-                return false;
-                
-                
-            }
-            
-            
-            
-        }
-        
-        
-        
+
+		public function login($un, $pw) {
+
+			$pw = md5($pw);
+
+			$query = mysqli_query($this->con, "SELECT * FROM users WHERE username='$un' AND password='$pw'");
+
+			if(mysqli_num_rows($query) == 1) {
+				return true;
+			}
+			else {
+				array_push($this->errorArray, Constants::$loginFailed);
+				return false;
+			}
+
+		}
 
 		public function register($un, $fn, $ln, $em, $em2, $pw, $pw2) {
 			$this->validateUsername($un);
@@ -74,19 +62,15 @@
 		private function validateUsername($un) {
 
 			if(strlen($un) > 25 || strlen($un) < 5) {
-				array_push($this->errorArray, Constants::$userNameCharacters);
+				array_push($this->errorArray, Constants::$usernameCharacters);
 				return;
 			}
-            
-            $checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$un'");
-            
-            if(mysqli_num_rows($checkUsernameQuery) !=0){
-                
-               array_push($this->errorArray, Constants::$usernameTaken);
+
+			$checkUsernameQuery = mysqli_query($this->con, "SELECT username FROM users WHERE username='$un'");
+			if(mysqli_num_rows($checkUsernameQuery) != 0) {
+				array_push($this->errorArray, Constants::$usernameTaken);
 				return;
-            }
-            
-            
+			}
 
 		}
 
@@ -114,31 +98,21 @@
 				array_push($this->errorArray, Constants::$emailInvalid);
 				return;
 			}
-            
-            
-                 
-            $checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE email='$em'");
-            
-            if(mysqli_num_rows($checkEmailQuery) !=0){
-                
-                array_push($this->errorArray, Constants::$emailTaken);
-                return;
-                
-            }
-            
-            
-  
+
+			$checkEmailQuery = mysqli_query($this->con, "SELECT email FROM users WHERE email='$em'");
+			if(mysqli_num_rows($checkEmailQuery) != 0) {
+				array_push($this->errorArray, Constants::$emailTaken);
+				return;
+			}
 
 		}
 
 		private function validatePasswords($pw, $pw2) {
 			
 			if($pw != $pw2) {
-				array_push($this->errorArray, Constants::$passwordsDoNotMatch);
+				array_push($this->errorArray, Constants::$passwordsDoNoMatch);
 				return;
 			}
-            
-            
 
 			if(preg_match('/[^A-Za-z0-9]/', $pw)) {
 				array_push($this->errorArray, Constants::$passwordNotAlphanumeric);
