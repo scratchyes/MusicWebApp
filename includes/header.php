@@ -2,6 +2,7 @@
 include("includes/config.php");
 include("includes/classes/Artist.php");
 include("includes/classes/Album.php");
+include("includes/classes/Song.php");
 
 //session_destroy(); MANUAL LOGOUT UNTIL IMPLEMENTATION OF LOGOUT BUTTON
 
@@ -17,7 +18,7 @@ else {
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<title>Welcome to LiveMusic!</title>
+	<title>Welcome!</title>
 </head>
 
 <body>
