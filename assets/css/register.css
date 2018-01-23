@@ -15,6 +15,7 @@ body {
     width: 100%;
 }
 
+
 #loginContainer * {
 	color: #fff;
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
@@ -23,12 +24,15 @@ body {
 	box-sizing: border-box;
 }
 
+
+
 #loginContainer {
 	width: 80%;
 	margin: 0 auto;
 	position: relative;
 	max-width: 1024px;
 }
+
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:    #fff;
@@ -48,16 +52,22 @@ body {
    color:    #fff;
 }
 
+
+
 #inputContainer {
     width: 400px;
     padding: 45px;
     float: left;
-    border-right: 1px solid #999;
+     border-right: 1px solid #999;
 }
+
+
 
 #inputContainer h2 {
 	text-align: center;
 }
+
+
 
 #inputContainer input[type="text"],
 #inputContainer input[type="email"],
@@ -113,6 +123,7 @@ body {
 #loginText {
     padding: 45px;
     display: table-cell;
+    
 }
 
 #loginText h1 {
@@ -141,3 +152,49 @@ body {
     font-size: 12px;
     display: block;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

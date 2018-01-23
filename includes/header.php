@@ -4,7 +4,7 @@ include("includes/classes/Artist.php");
 include("includes/classes/Album.php");
 include("includes/classes/Song.php");
 
-//session_destroy(); MANUAL LOGOUT UNTIL IMPLEMENTATION OF LOGOUT BUTTON
+//session_destroy(); LOGOUT
 
 if(isset($_SESSION['userLoggedIn'])) {
 	$userLoggedIn = $_SESSION['userLoggedIn'];
@@ -17,23 +17,22 @@ else {
 
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<title>Welcome!</title>
+	<title>Welcome to Live Music!</title>
+
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="assets/js/script.js"></script>
 </head>
 
 <body>
-	
-    <div id="mainContainer">
-    
-        
-        <div id="topContainer">
-        
-<!--        Houses the navigation and the main content-->
- 
-            <?php  include("includes/navBarContainer.php"); ?>
-            
-            <div id="mainViewContainer">
-                
-                
-                <div id="mainContent">
-                
+
+	<div id="mainContainer">
+
+		<div id="topContainer">
+
+			<?php include("includes/navBarContainer.php"); ?>
+
+			<div id="mainViewContainer">
+
+				<div id="mainContent">
