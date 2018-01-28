@@ -1,56 +1,12 @@
 <?php 
 include("includes/includedFiles.php"); 
 
+
+
+
 ?>
                 
-                
-       
-
-<h1 class="pageHeadingBig">You Might Also Like</h1>
 
 
-<div class="gridViewContainer">
 
-
-    <?php
-    
-    
-        $albumQuery = mysqli_query($con, "SELECT * FROM albums ORDER BY RAND() LIMIT 10");
-    
-        while($row = mysqli_fetch_array($albumQuery)){
-        
-       
-        //echo $row['title'] . "<br>"; // just to check the title from database
-        
-        echo "<div class='gridViewItem'>
-        
-            <span  role ='link' tabIndex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")' >
-
-                    <img src='" . $row['artworkPath'] . "'>
-
-                    <div class='gridViewInfo'>"
-
-
-                    . $row['title'] .
-
-
-                    "</div>
-                    
-                    
-                    </span>
-        
-        </div>";
-        
-        
-        
-        
-        
-    }
-    
-    
-    ?>
-    
-
-</div>
-
-             
+<script>openPage("browse.php")</script>

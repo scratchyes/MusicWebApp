@@ -21,6 +21,10 @@ function openPage(url){
     var encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);
     $("#mainContent").load(encodedUrl); //load the maincontent only changing to different pages
     
+    $("body").scrollTop(0);
+    history.pushState(null, null, url);
+    
+    
 }
 
 
