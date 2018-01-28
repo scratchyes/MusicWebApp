@@ -1,4 +1,4 @@
-<?php include("includes/header.php"); 
+<?php include("includes/includedFiles.php");
 
 
 
@@ -154,17 +154,3 @@ $artist = $album->getArtist();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<?php include("includes/footer.php"); ?>

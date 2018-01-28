@@ -6,6 +6,24 @@ var mouseDown = false;
 var currentIndex =0;
 var repeat = false;
 var shuffle = false;
+var userLoggedIn;
+
+
+function openPage(url){
+    
+    
+    if(url.indexOf("?") == -1){
+        
+        url = url + "?";
+        
+    }
+    
+    var encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);
+    $("#mainContent").load(encodedUrl); //load the maincontent only changing to different pages
+    
+}
+
+
 
 function formatTime(seconds) {
 	var time = Math.round(seconds);
@@ -25,10 +43,13 @@ function updateTimeProgressBar(audio) {
 	$(".playbackBar .progress").css("width", progress + "%");
 }
 
+
+
 function updateVolumeProgressBar(audio) {
 	var volume = audio.volume * 100;
 	$(".volumeBar .progress").css("width", volume + "%");
 }
+
 
 function Audio() {
 

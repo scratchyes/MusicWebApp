@@ -1,4 +1,7 @@
-<?php include("includes/header.php"); ?>
+<?php 
+include("includes/includedFiles.php"); 
+
+?>
                 
                 
        
@@ -21,7 +24,7 @@
         
         echo "<div class='gridViewItem'>
         
-            <a href='album.php?id=" . $row['id'] . "'>
+            <span  role ='link' tabIndex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")' >
 
                     <img src='" . $row['artworkPath'] . "'>
 
@@ -34,7 +37,7 @@
                     "</div>
                     
                     
-                    </a>
+                    </span>
         
         </div>";
         
@@ -49,11 +52,5 @@
     
 
 </div>
-
-
-
-
-
-<?php include("includes/footer.php"); ?>
 
              

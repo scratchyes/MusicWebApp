@@ -2,25 +2,28 @@
             
                 <nav class="navBar">
                 
-                    <a href="index.php" class="logo">
+                    <span  role ="link" tabIndex="0" onclick="openPage('index.php')" class="logo">
                     
                     <img src="assets/images/icons/spotify.png">
                     
-                    </a>
+                    </span>
                     
                     
                     <div class="group">
                         
                     <div class="navItem">
                         
-                        <a href="search.php" class="navItemLink">
+                        
+                        <span  role ='link' tabIndex='0' onclick='openPage("search.php")' class="navItemLink"  >
+                        
+                     
                         
                         Search
                             
                         <img src="assets/images/icons/search.png" class="icon" alt="Search">
                             
                             
-                        </a>
+                        </span>
                         
                         </div>
                     
@@ -32,26 +35,26 @@
                     
                     <div class="navItem">
                         
-                        <a href="browse.php" class="navItemLink">
+                        <span  role ="link" tabIndex="0" onclick="openPage('browse.php')" class="navItemLink">
                         
                         Browse
-                        </a>
+                        </span>
                         
                         </div>
                         <div class="navItem">
                         
-                        <a href="yourmusic.php" class="navItemLink">
+                       <span  role ="link" tabIndex="0" onclick="openPage('yourmusic.php')" class="navItemLink">
                         
                         My Music
-                        </a>
+                            </span>
                         
                         </div>
                         <div class="navItem">
                         
-                        <a href="profile.php" class="navItemLink">
+                      <span  role ="link" tabIndex="0" onclick="openPage('profile.php')" class="navItemLink">
                         
                         Profile
-                        </a>
+                            </span>
                         
                         </div>
                     
