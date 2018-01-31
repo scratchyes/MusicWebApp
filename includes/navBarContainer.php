@@ -45,7 +45,7 @@
                         
                        <span  role ="link" tabIndex="0" onclick="openPage('yourmusic.php')" class="navItemLink">
                         
-                        My Music
+                        Your Music
                             </span>
                         
                         </div>
