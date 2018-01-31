@@ -38,7 +38,7 @@ $(".searchInput").focus();
 
 $(function(){
     
-   var timer;
+
     
     
     $(".searchInput").keyup(function(){
@@ -63,6 +63,17 @@ $(function(){
 </script>
 
 
+<?php
+
+if($term == "") 
+    exit();
+
+?>
+
+
+
+
+
 <div class="trackListContainer borderBottom">
     
     
@@ -79,7 +90,7 @@ $(function(){
         
             if(mysqli_num_rows($songsQuery)==0){
                 
-                echo "<span class='noResults'>No songs found matching" . $term . "</span>";
+                echo "<span class='noResults'>No songs found matching " . $term . "</span>";
                 
                 
             }
@@ -205,7 +216,7 @@ $(function(){
     
     if(mysqli_num_rows($artistsQuery)==0){
                 
-                echo "<span class='noResults'>No artists found matching" . $term . "</span>";
+                echo "<span class='noResults'>No artists found matching " . $term . "</span>";
                 
                 
             }
@@ -259,7 +270,62 @@ $(function(){
 
 
 
+<div class="gridViewContainer">
 
+
+    <h2>ALBUMS</h2>
+    
+    
+    
+    <?php
+    
+    
+        $albumQuery = mysqli_query($con, "SELECT * FROM albums WHERE title LIKE '$term%' LIMIT 10");
+    
+    
+       if(mysqli_num_rows($albumQuery)==0){
+                
+                echo "<span class='noResults'>No albums found matching " . $term . "</span>";
+                
+                
+            }
+    
+    
+        while($row = mysqli_fetch_array($albumQuery)){
+        
+       
+        //echo $row['title'] . "<br>"; // just to check the title from database
+        
+        echo "<div class='gridViewItem'>
+        
+            <span  role ='link' tabIndex='0' onclick='openPage(\"album.php?id=" . $row['id'] . "\")' >
+
+                    <img src='" . $row['artworkPath'] . "'>
+
+                    <div class='gridViewInfo'>"
+
+
+                    . $row['title'] .
+
+
+                    "</div>
+                    
+                    
+                    </span>
+        
+        </div>";
+        
+        
+        
+        
+        
+    }
+    
+    
+    ?>
+    
+
+</div>
 
 
 
