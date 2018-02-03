@@ -51,9 +51,10 @@
                         </div>
                         <div class="navItem">
                         
-                      <span  role ="link" tabIndex="0" onclick="openPage('profile.php')" class="navItemLink">
+                      <span  role ="link" tabIndex="0" onclick="openPage('settings.php')" class="navItemLink">
                         
-                        Profile
+                        <?php echo $userLoggedIn->getFirstAndLastName();  ?>
+                          
                             </span>
                         
                         </div>

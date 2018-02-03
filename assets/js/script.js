@@ -39,6 +39,42 @@ $(document).on("change", "select.playlist", function() {
 	});
 });
 
+
+function updateEmail(emailClass) {
+	var emailValue = $("." + emailClass).val();
+
+	$.post("includes/handlers/ajax/updateEmail.php", { email: emailValue, username: userLoggedIn})
+	.done(function(response) {
+		$("." + emailClass).nextAll(".message").text(response);
+	})
+
+
+}
+
+function updatePassword(oldPasswordClass, newPasswordClass1, newPasswordClass2) {
+	var oldPassword = $("." + oldPasswordClass).val();
+	var newPassword1 = $("." + newPasswordClass1).val();
+	var newPassword2 = $("." + newPasswordClass2).val();
+
+	$.post("includes/handlers/ajax/updatePassword.php", 
+		{ oldPassword: oldPassword,
+			newPassword1: newPassword1,
+			newPassword2: newPassword2, 
+			username: userLoggedIn})
+
+	.done(function(response) {
+		$("." + oldPasswordClass).nextAll(".message").text(response);
+	})
+
+
+}
+
+function logout() {
+	$.post("includes/handlers/ajax/logout.php", function() {
+		location.reload();
+	});
+}
+
 function openPage(url) {
 
 	if(timer != null) {
@@ -50,41 +86,29 @@ function openPage(url) {
 	}
 
 	var encodedUrl = encodeURI(url + "&userLoggedIn=" + userLoggedIn);
-	console.log(encodedUrl);
 	$("#mainContent").load(encodedUrl);
 	$("body").scrollTop(0);
 	history.pushState(null, null, url);
 }
 
-function removeFromPlaylist(button, playlistId){
-    
-    var songId = $(button).prevAll(".songId").val();
-    
-    
-    $.post("includes/handlers/ajax/removeFromPlaylist.php", { playlistId: playlistId, songId: songId })
-		.done(function(error) {
+function removeFromPlaylist(button, playlistId) {
+	var songId = $(button).prevAll(".songId").val();
 
-			if(error != "") {
-				alert(error);
-				return;
-			}
+	$.post("includes/handlers/ajax/removeFromPlaylist.php", { playlistId: playlistId, songId: songId })
+	.done(function(error) {
 
-			//do something when ajax returns
-			openPage("playlist.php?id="+playlistId);
-		});
+		if(error != "") {
+			alert(error);
+			return;
+		}
 
-
-    
-    
-    
-    
+		//do something when ajax returns
+		openPage("playlist.php?id=" + playlistId);
+	});
 }
 
-
-
-
 function createPlaylist() {
-	console.log(userLoggedIn);
+
 	var popup = prompt("Please enter the name of your playlist");
 
 	if(popup != null) {
