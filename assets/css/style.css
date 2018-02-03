@@ -595,6 +595,8 @@ input:focus{
     color: rgba(147,147,147, 0.8);
     cursor: pointer;
     height: 40px;
+    background-color: #282828;
+    font-size: 14px;
     
     
 }
@@ -609,8 +611,12 @@ input:focus{
 
 
 
-
-
+.optionsMenu select{
+    
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance:none;
+}
 
 
 
